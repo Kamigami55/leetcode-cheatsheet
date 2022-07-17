@@ -14,6 +14,12 @@ Just enough cheatsheets for LeetCode
 - [JavaScript (Work In Progress)](./javascript.md)
 - Other languages work in progress
 
+## Roadmap
+
+Add cheatsheets for more languages
+
+See [project kanban board](https://github.com/users/Kamigami55/projects/1?query=is%3Aopen+sort%3Aupdated-desc)
+
 ## Contributing
 
 PRs are welcome!
