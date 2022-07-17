@@ -6,7 +6,7 @@ Just enough Python cheatsheet for LeetCode
 
 [Go back to full list](./README.md)
 
-Written in Python 3
+Written in Python 3.10
 
 ---
 
@@ -203,3 +203,57 @@ len(st)
 ## Tree
 
 ## Graph
+
+# Algorithms
+
+## Binary search
+
+### Using `bisect` module
+
+`bisect` stands for bisection ([Doc](https://docs.python.org/3/library/bisect.html))
+
+```python
+import bisect
+def binary_search(arr, val):
+    pos = bisect.bisect_left(arr, val)
+    return pos if pos != len(arr) and arr[pos] == val else -1
+
+arr = [0, 2, 4]
+binary_search(arr, 2)   # 1
+binary_search(arr, 1)   # -1 (not found)
+```
+
+### Manual
+
+```python
+def binary_search(arr, target):
+  left, right = 0, len(arr) - 1
+  while left <= right:
+    mid = (left + right) // 2
+    if arr[mid] == target:
+      return mid
+    elif arr[mid] < target:
+      left = mid + 1
+    else:
+      right = mid - 1
+  return -1
+
+arr = [0, 2, 4]
+binary_search(arr, 2)   # 1
+binary_search(arr, 1)   # -1 (not found)
+```
+
+### Find insertion position
+
+Using `bisect` module
+
+```python
+import bisect
+arr = [0, 2, 4]
+index_right_for_insert = bisect.bisect(arr, 2)                           # 2
+index_right_for_insert = bisect.bisect(arr, 1)                           # 1
+with_lambda            = bisect.bisect(arr, 20, key=lambda val: val*10)  # 2
+# bisect.bisect_right == bisect.bisect
+index_left_for_insert  = bisect.bisect_left(arr, 1)                      # 1
+index_left_for_insert  = bisect.bisect_left(arr, 2)                      # 1
+```
