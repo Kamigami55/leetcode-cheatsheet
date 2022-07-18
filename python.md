@@ -27,11 +27,11 @@ my_none = None
 ### Casting
 
 ```python
-float(1) # 1.0
-int(1.9) # 1
-int("1") # 1
-str(1) # '1'
-float("1.9") # 1.9
+float(1)      # 1.0
+int(1.9)      # 1
+int("1")      # 1
+str(1)        # '1'
+float("1.9")  # 1.9
 ```
 
 ### String Operations
@@ -142,7 +142,7 @@ arr[0]   = 10         # [10, 1, 2, 3, 4]
 arr[1:3] = [20, 21]   # [10, 20, 21, 3, 4]
 arr.append(30)        # [10, 20, 21, 3, 4, 30]
 arr.pop(0)            # [20, 21, 3, 4, 30], Remove by index (start from 0)
-arr.remove(21)        # [20, 3, 4, 30], Remove by value
+arr.remove(21)        # [20, 3, 4, 30],     Remove by value
 
 
 ```
@@ -245,7 +245,7 @@ smallest = heapq.heappushpop(h, 0)  # push 0 and pop the smallest
 ```python
 s = set()
 s.add(1)
-if 1 in s: #true
+if 1 in s: # True
 ```
 
 ## Matrix
@@ -265,10 +265,8 @@ for r in range(len(matrix)):
 ## Queue
 
 ```python
-# collections auto imported in LeetCode environment
-# to import manually, write this:
-# `from collections import deque`
-q = collections.deque()
+from collections import deque
+q = deque()
 q.appendleft(1)
 q.appendleft(2)
 q.appendleft(3)
@@ -337,7 +335,7 @@ arr = [0, 2, 4]
 index_right_for_insert = bisect.bisect(arr, 2)                           # 2
 index_right_for_insert = bisect.bisect(arr, 1)                           # 1
 with_lambda            = bisect.bisect(arr, 20, key=lambda val: val*10)  # 2
-# bisect.bisect_right == bisect.bisect
+index_right_for_insert = bisect.bisect_right(arr, 2)                     # 2, `bisect_right` is `bisect`
 index_left_for_insert  = bisect.bisect_left(arr, 1)                      # 1
 index_left_for_insert  = bisect.bisect_left(arr, 2)                      # 1
 ```
