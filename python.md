@@ -13,15 +13,15 @@ Written in Python 3.10
 ## Primitive Types
 
 ```python
-my_int = 1
-my_float = 2.3
-my_str = 'hello'
-my_list = [0, 1, 2]
-my_tuple = (0, 1, 2)
-my_dict = {'a': 1, 'b': 2}
-my_set = {0, 1, 2}
-my_bool = True
-my_none = None
+my_int    = 1
+my_float  = 2.3
+my_str    = 'hello'
+my_list   = [0, 1, 2]
+my_tuple  = (0, 1, 2)
+my_dict   = {'a': 1, 'b': 2}
+my_set    = {0, 1, 2}
+my_bool   = True
+my_none   = None
 ```
 
 ### Casting
@@ -53,7 +53,7 @@ hi.lower()         # 'hello'
 
 ```python
 def my_func(param1, param2):
-    return param1 + param2
+  return param1 + param2
 
 my_func(1, 2) # 3
 ```
@@ -76,11 +76,11 @@ my_func(1, 2) # 3
 
 ```python
 if a == b:
-    print("a is equal to b")
+  print("a is equal to b")
 elif a > b:
-    print("a is greater than b")
+  print("a is greater than b")
 else:
-    print("a is less than b")
+  print("a is less than b")
 ```
 
 ### While loop
@@ -274,7 +274,7 @@ q.appendleft(3)
 q.pop()  # 1
 q.pop()  # 2
 q.pop()  # 3
-if q: # false, check empty
+if q:    # False, check empty
 ```
 
 ## Stack
@@ -297,8 +297,8 @@ len(st)
 ```python
 import bisect
 def binary_search(arr, val):
-    pos = bisect.bisect_left(arr, val)
-    return pos if pos != len(arr) and arr[pos] == val else -1
+  pos = bisect.bisect_left(arr, val)
+  return pos if pos != len(arr) and arr[pos] == val else -1
 
 arr = [0, 2, 4]
 binary_search(arr, 2)   # 1
