@@ -11,7 +11,6 @@ Just enough cheatsheets for LeetCode
 ## Programming language
 
 - [Python (Work In Progress)](./python.md)
-- [JavaScript (Work In Progress)](./javascript.md)
 - Other languages work in progress
 
 ## Roadmap
