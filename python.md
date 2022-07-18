@@ -14,17 +14,90 @@ Written in Python 3.10
 
 ## Primitive Types
 
+```python
+my_int = 1
+my_float = 2.3
+my_str = 'hello'
+my_list = [0, 1, 2]
+my_tuple = (0, 1, 2)
+my_dict = {'a': 1, 'b': 2}
+my_set = {0, 1, 2}
+my_bool = True
+my_none = None
+```
+
 ### Casting
 
-### Base Conversion
+```python
+float(1) # 1.0
+int(1.9) # 1
+int("1") # 1
+str(1) # '1'
+float("1.9") # 1.9
+```
 
-### String Manipulation
+### String Operations
+
+```python
+hi = "Hello"
+len(hi)            # 5
+hi[0]              # 'H'
+"He" in hi         # True
+"world" not in hi  # True
+hi[0:2]            # 'He'
+"He" + "llo"       # 'Hello'
+hi.upper()         # 'HELLO'
+hi.lower()         # 'hello'
+"a,b,c".split(",") # ['a', 'b', 'c']
+```
 
 ## Function
 
+```python
+def my_func(param1, param2):
+    return param1 + param2
+
+my_func(1, 2) # 3
+```
+
 ## Arithmetic
 
+```python
+3 + 2   # 5
+3 - 2   # 1
+3 * 2   # 6
+3 / 2   # 1.5
+3 // 2  # 1
+3 % 2   # 1
+3 ** 2  # 9
+```
+
 ## Control Flow
+
+### If Else
+
+```python
+if a == b:
+    print("a is equal to b")
+elif a > b:
+    print("a is greater than b")
+else:
+    print("a is less than b")
+```
+
+### While loop
+
+```python
+while True:
+  break
+  continue
+```
+
+### For Loop
+
+```python
+for val in [1, 2, 3]:
+```
 
 ---
 
@@ -138,17 +211,13 @@ for i, val in enumerate(arr):
 
 ---
 
-## Tuple
-
-## String
-
 ## Hash Table
 
 Use Python's `Dict`
 
 ```python
-ht =      {}
-ht =      {'a': 1, 'b': 2}
+ht = {}
+ht = {'a': 1, 'b': 2}
 ht['a']                 # Get
 ht['c'] = 3             # Add, Set
 del ht['a']             # Delete
@@ -160,6 +229,19 @@ for k, v in ht.items(): # Iterate
 
 ## Heap
 
+Use `heapq` built-in module
+
+```python
+import heapq
+h = [2,3,4,1,5]
+heapq.heapify(h)                    # h is now a min heap
+smallest = heapq.heap[0]            # 1
+smallest = heapq.heappop(h)         # 1
+len(h)                              # 4
+heapq.heappush(h, 1)                # put 1 back into the heap, stay on the top of the heap, because it is the smallest
+smallest = heapq.heappushpop(h, 0)  # push 0 and pop the smallest
+```
+
 ## Set
 
 ```python
@@ -170,9 +252,17 @@ if 1 in s: #true
 
 ## Matrix
 
-## Linked List
+```python
+matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
 
-## Pointer
+for r in range(len(matrix)):
+  for c in range(len(matrix[0])):
+    print(matrix[r][c])
+```
 
 ## Queue
 
@@ -199,10 +289,6 @@ st.append(1)
 item = st.pop() # 1
 len(st)
 ```
-
-## Tree
-
-## Graph
 
 # Algorithms
 
@@ -236,7 +322,7 @@ def binary_search(arr, target):
       left = mid + 1
     else:
       right = mid - 1
-  return -1
+  return -**1**
 
 arr = [0, 2, 4]
 binary_search(arr, 2)   # 1
@@ -256,4 +342,11 @@ with_lambda            = bisect.bisect(arr, 20, key=lambda val: val*10)  # 2
 # bisect.bisect_right == bisect.bisect
 index_left_for_insert  = bisect.bisect_left(arr, 1)                      # 1
 index_left_for_insert  = bisect.bisect_left(arr, 2)                      # 1
+```
+
+## Random
+
+```python
+import random
+random.randint(0, 10) # 0 ~ 10
 ```
