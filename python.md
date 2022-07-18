@@ -1,7 +1,5 @@
 # Python - LeetCode Cheatsheet
 
-> Work In Progress
-
 Just enough Python cheatsheet for LeetCode
 
 [Go back to full list](./README.md)

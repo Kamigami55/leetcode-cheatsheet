@@ -10,8 +10,8 @@ Just enough cheatsheets for LeetCode
 
 ## Programming language
 
-- [Python (Work In Progress)](./python.md)
-- Other languages work in progress
+- [Python](./python.md)
+- Other languages work in progress!
 
 ## Roadmap
 
