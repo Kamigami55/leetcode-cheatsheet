@@ -47,6 +47,11 @@ hi[0:2]            # 'He'
 hi.upper()         # 'HELLO'
 hi.lower()         # 'hello'
 "a,b,c".split(",") # ['a', 'b', 'c']
+for char in "string":                   # iterate over characters
+for index, char in enumerate("string"): # iterate over characters and indexes
+ord("a")            # 97, ordinal of character
+ord('c') - ord('a') # 2
+chr(97)             # 'a'
 ```
 
 ## Function
