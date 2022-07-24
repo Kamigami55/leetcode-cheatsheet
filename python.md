@@ -251,6 +251,7 @@ smallest = heapq.heappushpop(h, 0)  # push 0 and pop the smallest
 s = set()
 s.add(1)
 if 1 in s: # True
+s.discard(1)
 ```
 
 ## Matrix
