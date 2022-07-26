@@ -34,6 +34,20 @@ str(1)        # '1'
 float("1.9")  # 1.9
 ```
 
+## Type Checking
+
+```python
+if type('') is str:   # True
+if type(0) is int:    # True
+if type({}) is dict:  # True
+if type([]) is list:  # True
+
+class MyClass:
+  pass
+my_class_var = MyClass()
+if type(my_class_var) is MyClass:  # True
+```
+
 ### String Operations
 
 ```python
